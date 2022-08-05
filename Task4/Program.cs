@@ -24,4 +24,4 @@ if (numC > max)
 
     max = numC;
 
-Console.Write(max + " - максимальное из введенных вами чисел");
+Console.Write(max + " - максимальное из введенных Bами чисел");
