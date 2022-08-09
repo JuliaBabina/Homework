@@ -7,19 +7,15 @@
 Console.Clear();
 
 Console.WriteLine("Enter a number: ");
+string numSeq = Convert.ToString(Console.ReadLine());
+if (numSeq.Length > 2 )
+{
+    Console.Write("Third digit: " + numSeq[2]);
+}
 
-string 
+else
+{
+    Console.Write("This number does not have a third digit");
+}
 
-// int num = Convert.ToInt32(Console.ReadLine());
-// int firstDigit = Math.Abs(num / 10);
-// int secondDigit = Math.Abs(firstDigit % 10);
-// int thirdDigit = Math.Abs(secondDigit % 10);
 
-// if (Math.Abs(num) / 100 > 0)
-// {
-//     Console.Write("Third digit: " + thirdDigit);
-// }
-// else
-// {
-//     Console.Write("This number does not have a third digit");
-// }
