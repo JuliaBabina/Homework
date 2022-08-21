@@ -55,59 +55,56 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-int[] CreateArrayFL(int n, int first, int last)
-{
-    int[] array = new int[n];
-    for (int i = 0; i < n; i++)
-    {
-        array[i] = new Random().Next(first, last + 1);
-    }
-    return array;
-}
 
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
+// int[] CreateArrayFL(int n, int first, int last)
+// {
+//     int[] array = new int[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         array[i] = new Random().Next(first, last + 1);
+//     }
+//     return array;
+// }
 
-int FindOddIndexSum(int[] array)
-{
-    int oddIndexSum = 0;
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] % 2 == 0)
-        {
-            oddIndexSum += array[i];
-        }
+// int FindOddIndexSum(int[] array)
+// {
+//     int oddIndexSum = 0;
 
-    }
-    return oddIndexSum;
-}
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (i % 2 != 0)
+//         {
+//             oddIndexSum += array[i];
+//         }
 
-Console.Clear();
+//     }
+//     return oddIndexSum;
+// }
 
-Console.WriteLine("Enter the number of array elements: ");
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.Clear();
 
-Console.WriteLine("Enter the first number of the range: ");
-int f = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the number of array elements: ");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Enter the last number of the range: ");
-int l = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the first number of the range: ");
+// int f = Convert.ToInt32(Console.ReadLine());
 
-int[] ArrayArray = CreateArrayFL(num, f, l);
-Console.Write("Output an array: ");
-PrintArray(ArrayArray);
-Console.WriteLine($"The sum of the elements of this array standing in odd positions is equal to {FindOddIndexSum(ArrayArray)}");
+// Console.WriteLine("Enter the last number of the range: ");
+// int l = Convert.ToInt32(Console.ReadLine());
 
-
-
-
+// int[] ArrayArray = CreateArrayFL(num, f, l);
+// Console.Write("Output an array: ");
+// PrintArray(ArrayArray);
+// Console.WriteLine($"The sum of the elements of this array standing in odd positions is equal to {FindOddIndexSum(ArrayArray)}");
 
 
 
