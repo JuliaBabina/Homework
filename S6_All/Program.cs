@@ -114,8 +114,64 @@
 // 3 -> 11
 // 2 -> 10
 
+// int GetSize(int number)
+// {
+
+//     int size = 1;
+//     while (number / 2 >= 1)
+//     {
+//         number = number / 2;
+//         size++;
+//     }
+
+//     return size;
+// }
 
 
+// void FillArray(int[] arr)
+// {
+//     Console.WriteLine("Повторите ввод: ");
+//     int number = Convert.ToInt32(Console.ReadLine());
+//     int i = 1;
+//     arr[0] = number % 2;
+
+//     while (number / 2 >= 1 && i < arr.Length)
+//     {
+//         arr[i] = number / 2 % 2;
+//         number = number / 2;
+//         i++;
+//     }
+// }
+
+
+// void FlipArray(int[] arr)
+// {
+//     int i = 0;
+//     while (i < arr.Length/2)
+
+//     {
+//         int temp = arr[i];
+//         arr[i] = arr[arr.Length - i - 1];
+//         arr[arr.Length - i - 1] = temp;
+//         i++;
+
+//     }
+//     Console.WriteLine(string.Join("", arr));
+// }
+
+
+// Console.Clear();
+// Console.WriteLine("Введите десятичное число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// int[] meArray = new int[GetSize(number)];
+// FillArray(meArray);
+// Console.Write($"Десятичное число {number} в двоичном фомате: ");
+// FlipArray(meArray);
+
+
+
+// ***************************************************************************************************************
 
 
 
