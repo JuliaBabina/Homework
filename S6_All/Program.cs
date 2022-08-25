@@ -180,7 +180,71 @@
 // Если N = 3 -> 0 1 1
 // Если N = 7 -> 0 1 1 2 3 5 8
 
+// Console.Clear();
+// Console.WriteLine("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// int[] arrayFib = new int[n];
+// arrayFib[0] = 0;
+// arrayFib[1] = 1;
+
+// Console.Write($"Первые {n} чисел Фибоначчи: ");
+
+// for (int i = 2; i < n; i++)
+// {
+//     arrayFib[i] = arrayFib[i - 1] + arrayFib[i - 2];
+
+// }
+
+// Console.WriteLine(string.Join(" ", arrayFib));
+
+
+
+// ***************************************************************************************************************
 
 
 
 // Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
+
+// int[] CreateArray(int n)
+// {
+//     int[] array = new int[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         array[i] = new Random().Next(-100, 101);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void CopyArray(int[] arrF, int[] arrS)
+// {
+
+//     for (int i = 0; i < arrF.Length; i++)
+//     {
+//         arrS[i] = arrF[i];
+//         Console.Write(arrS[i] + " ");
+//     }
+// }
+
+// Console.Clear();
+
+// Console.WriteLine("Enter the number of array elements: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int[] myArray = CreateArray(num);
+// Console.WriteLine("Output an array: ");
+// PrintArray(myArray);
+// int[] copyArr = new int[num];
+// Console.WriteLine("Output a copy of the array: ");
+// CopyArray(myArray, copyArr);
+
+
+
