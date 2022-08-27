@@ -153,68 +153,70 @@
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
-int Intro(string message)
-{
-    System.Console.Write(message);
-    int result = Convert.ToInt32(Console.ReadLine());
-    return result;
-}
+// int Intro(string message)
+// {
+//     System.Console.Write(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
 
 
-int[,] FillMatrix(int lines, int columns, int first, int last)
-{
-    int[,] matrix = new int[lines, columns];
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            matrix[i, j] = new Random().Next(first, last);
-        }
-    }
-    return matrix;
-}
+// int[,] FillMatrix(int lines, int columns, int first, int last)
+// {
+//     int[,] matrix = new int[lines, columns];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(first, last);
+//         }
+//     }
+//     return matrix;
+// }
 
 
-void PrintMatrix(int[,] matrix)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            Console.Write($"{matrix[i, j]}\t");
-        }
-        Console.WriteLine();
-    }
-}
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
 
 
-double Average(int[,] matrix)
-{
-    averageSum = 0;
-    double [] average  = new int[];
-    for (int j = 0; j < matrix.GetLength(0); j++)
-    {
-        for (int i = 0; i < matrix.GetLength(1); i++)
-        {
-            averageSum += matrix[i, j];
-        }
-    }
-    return matrix;
+// void AverageSum(int[,] matrix)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         double sum = 0;
+//         double averageSum = 0;
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             sum += matrix[i, j];
+//             averageSum = sum/matrix.GetLength(0);
 
-}
+//         }
+//         Console.Write(Math.Round(averageSum,1) + "   ");
+//     }
 
-Console.Clear();
+// }
 
-int line = Intro("Enter the number of lines in the array: ");
-int column = Intro("Enter the number of columns in the array: ");
-int begin = Intro("Enter the upper limit of the range: ");
-int end = Intro("Enter the lower limit of the range: ");
-int[,] matr = FillMatrix(line, column, begin, end);
-Console.WriteLine("Output a two-dimensional array: ");
-PrintMatrix(matr);
+// Console.Clear();
 
-Console.WriteLine("The arithmetic mean of each column in the array ");
-Average(matr);
+// int line = Intro("Enter the number of lines in the array: ");
+// int column = Intro("Enter the number of columns in the array: ");
+// int begin = Intro("Enter the upper limit of the range: ");
+// int end = Intro("Enter the lower limit of the range: ");
+// int[,] matr = FillMatrix(line, column, begin, end);
+// Console.WriteLine("Output a two-dimensional array: ");
+// PrintMatrix(matr);
+
+// Console.WriteLine("The arithmetic mean of each column in the array: ");
+// AverageSum(matr);
 
 
 
@@ -223,5 +225,92 @@ Average(matr);
 
 
 //Задача 4. Со звездочкой(*). Найдите максимальное значение в матрице по каждой строке, сумируйте их. 
-// Затем найдети минимальное значение по каждой колонке, тоже сумируйте их. 
+// Затем найдите минимальное значение по каждой колонке, тоже сумируйте их. 
 // Затем из первой суммы (с максимумами) вычтите вторую сумму(с минимумами)
+
+
+// int Intro(string message)
+// {
+//     System.Console.Write(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
+
+
+// int[,] FillMatrix(int lines, int columns, int first, int last)
+// {
+//     int[,] matrix = new int[lines, columns];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(first, last);
+//         }
+//     }
+//     return matrix;
+// }
+
+
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+// int MaxLineNumber(int[,] matrix)
+// {
+//     int sumMax = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         int max = matrix[i, 0];
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (matrix[i, j] > max)
+//             {
+//                 max = matrix[i, j];
+//             }
+//         }
+//         sumMax += max;
+//     }
+
+//     return sumMax;
+// }
+
+// int MinColumnNumber(int[,] matrix)
+// {
+//     int sumMin = 0;
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         int min = matrix[0, j];
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             if (matrix[i, j] < min)
+//             {
+//                 min = matrix[i, j];
+//             }
+//         }
+//         sumMin += min;
+//     }
+
+//     return sumMin;
+// }
+
+// Console.Clear();
+
+// int line = Intro("Enter the number of lines in the array: ");
+// int column = Intro("Enter the number of columns in the array: ");
+// int begin = Intro("Enter the upper limit of the range: ");
+// int end = Intro("Enter the lower limit of the range: ");
+// int[,] matr = FillMatrix(line, column, begin, end);
+// Console.WriteLine("Output a two-dimensional array: ");
+// PrintMatrix(matr);
+
+// Console.WriteLine("Difference between the sum of the maximum elements in rows and the sum of the minimum elements in columns: ");
+// Console.Write(MaxLineNumber(matr) - MinColumnNumber(matr));
