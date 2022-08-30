@@ -294,12 +294,67 @@
 
 
 
-// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, 
+// которая будет построчно выводить массив, добавляя индексы каждого элемента.
 // Массив размером 2 x 2 x 2
 // 66(0,0,0) 25(0,1,0)
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
+
+
+
+int Intro(string message)
+{
+    System.Console.Write(message);
+    int result = Convert.ToInt32(Console.ReadLine());
+    return result;
+}
+
+
+int[,,] FillMatrix(int x, int y, int z)
+{
+    int[,,] matrix = new int[x, y, z];
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            for (int k = 0; k < matrix.GetLength(2); k++)
+                matrix[i, j, k] = new Random().Next(10, 100);
+        }
+    }
+    return matrix;
+}
+
+void PrintMatrix(int[,,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            for (int k = 0; k < matrix.GetLength(2); k++)
+            {
+                Console.Write($"{matrix[i, j, k]} ({i},{j},{k})\t");
+                
+            }
+            Console.WriteLine();
+        }
+        
+    }
+}
+
+
+Console.Clear();
+
+int x = Intro("Enter the the first dimension of the array: ");
+int y = Intro("Enter the the second dimension of the array: ");
+int z = Intro("Enter the the third dimension of the array: ");
+
+int[,,] matr = FillMatrix(x, y, x);
+Console.WriteLine("Output a three - dimensional array: ");
+PrintMatrix(matr);
+
+// !Неповторяющиеся числа и вывод, как в задании
 
 
 
