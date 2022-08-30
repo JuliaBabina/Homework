@@ -200,6 +200,98 @@
 // 15 18
 
 
+// int Intro(string message)
+// {
+//     System.Console.Write(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
+
+
+// int[,] FillMatrix(int lines, int columns, int first, int last)
+// {
+//     int[,] matrix = new int[lines, columns];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(first, last);
+//         }
+//     }
+//     return matrix;
+// }
+
+
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+// int[,] ProdMatrix(int[,] matrix1, int[,] matrix2)
+// {
+//     int[,] prodMatrix = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
+//     for (int i = 0; i < matrix1.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix2.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < matrix2.GetLength(0); k++)
+//             {
+//                 prodMatrix[i, j] += matrix1[i, k] * matrix2[k, j];
+//             }
+//         }
+//     }
+
+//     return prodMatrix;
+// }
+
+
+// Console.Clear();
+
+// int line1 = Intro("Enter the number of lines in the first matrix: ");
+// int column1 = Intro("Enter the number of columns in the first matrix: ");
+
+// int line2 = Intro("Enter the number of lines in the second matrix: ");
+// int column2 = Intro("Enter the number of columns in the second matrix ");
+
+// if (column1 != line2)
+
+// {
+//     Console.WriteLine("The product of matrices with such indicators is impossible");
+// }
+
+// else
+
+// {
+
+//     int begin = Intro("Enter the upper limit of the range: ");
+//     int end = Intro("Enter the lower limit of the range: ");
+
+//     int[,] matr1 = FillMatrix(line1, column1, begin, end);
+//     int[,] matr2 = FillMatrix(line2, column2, begin, end);
+//     Console.WriteLine();
+//     Console.WriteLine("Output first matrix: ");
+//     PrintMatrix(matr1);
+//     Console.WriteLine();
+//     Console.WriteLine("Output second matrix: ");
+//     PrintMatrix(matr2);
+//     Console.WriteLine();
+//     Console.WriteLine($"Product of the introduced matrices: ");
+//     PrintMatrix(ProdMatrix(matr1, matr2));
+
+// }
+
+
+
+//******************************************************************************************************************************
+
 
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
