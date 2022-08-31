@@ -304,58 +304,62 @@
 
 
 
-int Intro(string message)
-{
-    System.Console.Write(message);
-    int result = Convert.ToInt32(Console.ReadLine());
-    return result;
-}
+// int Intro(string message)
+// {
+//     System.Console.Write(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
 
 
-int[,,] FillMatrix(int x, int y, int z)
-{
-    int[,,] matrix = new int[x, y, z];
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            for (int k = 0; k < matrix.GetLength(2); k++)
-                matrix[i, j, k] = new Random().Next(10, 100);
-        }
-    }
-    return matrix;
-}
+// int[,,] FillMatrix(int x, int y, int z)
+// {
+//     int[,,] matrix = new int[x, y, z];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < matrix.GetLength(2); k++)
+//             {
+//                 matrix[i, j, k] = new Random().Next(10, 100);
 
-void PrintMatrix(int[,,] matrix)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            for (int k = 0; k < matrix.GetLength(2); k++)
-            {
-                Console.Write($"{matrix[i, j, k]} ({i},{j},{k})\t");
-                
-            }
-            Console.WriteLine();
-        }
-        
-    }
-}
+//             }
+//         }
+
+//     }
+//     return matrix;
+// }
+
+// void PrintMatrix(int[,,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < matrix.GetLength(2); k++)
+//             {
+//                 Console.Write($"{matrix[i, j, k]} ({i},{j},{k})\t");
+//             }
+//             Console.WriteLine();
+//         }
+
+//     }
+// }
 
 
-Console.Clear();
+// Console.Clear();
 
-int x = Intro("Enter the the first dimension of the array: ");
-int y = Intro("Enter the the second dimension of the array: ");
-int z = Intro("Enter the the third dimension of the array: ");
+// int x = Intro("Enter the the first dimension of the array: ");
+// int y = Intro("Enter the the second dimension of the array: ");
+// int z = Intro("Enter the the third dimension of the array: ");
 
-int[,,] matr = FillMatrix(x, y, x);
-Console.WriteLine("Output a three - dimensional array: ");
-PrintMatrix(matr);
+// int[,,] matr = FillMatrix(x, y, x);
+// Console.WriteLine("Output a three - dimensional array: ");
+// PrintMatrix(matr);
 
-// !Неповторяющиеся числа и вывод, как в задании
 
+
+//******************************************************************************************************************************
 
 
 
@@ -365,3 +369,60 @@ PrintMatrix(matr);
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+
+// int Intro(string message)
+// {
+//     System.Console.Write(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
+
+// int[,] FillMatrix(int size)
+// {
+//     int[,] matrix = new int[size, size];
+//     int num = 1;
+//     int i = 0;
+//     int j = 0;
+
+//     while (num <= size * size)
+//     {
+//         matrix[i, j] = num;
+//         if (i <= j + 1 && i + j < size - 1)
+//             ++j;
+//         else if (i < j && i + j >= size - 1)
+//             ++i;
+//         else if (i >= j && i + j > size - 1)
+//             --j;
+//         else
+//             --i;
+//         ++num;
+//     }
+
+//     return matrix;
+// }
+
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+
+
+// Console.Clear();
+
+// int lc = Intro("Enter the number of lines and columns in the rectangular array: ");
+// int[,] matr = FillMatrix(lc);
+// Console.WriteLine("Output 4x4 spiral array: ");
+// PrintMatrix(matr);
+
+
+
